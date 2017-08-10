@@ -1,0 +1,68 @@
+<div ng-controller="nuevaCtrl">
+
+    <div class="row text-center">
+        <div id="alerta"></div>
+    </div>
+
+    <div class="container ">
+
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Nuevo Grupo</button>
+        <div id="demo" class="collapse">
+            <div class="col-md-12 espacio-abajo bg-info espacio-arriba">
+
+                <div class="col-md-2 text-right"><label>Nombre:</label></div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="nGrupo" />
+                </div>
+
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-primary" value="GUARDAR GRUPO" ng-click="ingresaGrupo()" />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class=" form-group row espacio-arriba">
+        <div class="col-md-2 text-right"><label>Nombre:</label></div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="col-md-2 text-right"><label>Grupo:</label></div>
+        <div class="col-md-4">
+            <select class="form-control input-sm" id="grupo">
+                <option ng-repeat="(key,grupo) in grupos" value="{{key}}"  >{{grupo.nombre}}</option>
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <input type="button" class="btn btn-primary" value="GUARDAR" ng-click="ingresaLetra()" />
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <div class="col-md-6 bg-info">
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <label for="lEspaniol">Español</label>
+                </div>
+                <div class="col-md-12">
+                    <textarea id="lEspaniol" class="form-control" rows="30" cols="10"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 bg-warning">
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <label for="lIngles">English</label>
+                </div>
+                <div class="col-md-12">
+                    <textarea id="lIngles" class="form-control" rows="30" cols="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
